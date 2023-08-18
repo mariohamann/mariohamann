@@ -3,7 +3,12 @@ data:
   social_media:
     -
       id: trJdEAn4
-      handle: studio1902
+      handle: mariohamann
       prefix: 'https://www.github.com/'
       type: github
+      enabled: true
+    -
+      id: llgjc3co
+      handle: 'https://indieweb.social/@mariohamann'
+      type: mastodon
       enabled: true

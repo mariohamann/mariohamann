@@ -2,8 +2,8 @@
 id: home
 blueprint: page
 title: Home
-updated_by: fd779fda-9c01-4b82-9fad-6f6cedfe03cb
-updated_at: 1661203932
+updated_by: 225d58b0-3de7-45fb-b9a6-a2f543c6834c
+updated_at: 1692344487
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -11,6 +11,7 @@ sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 page_builder:
   -
+    id: 4zDbW9UQ
     article:
       -
         type: heading
@@ -41,9 +42,11 @@ page_builder:
     type: article
     enabled: true
   -
+    id: J6VJt4ii
     title: Features
     link_blocks:
       -
+        id: ksU2k04F
         title: 'Check out a form'
         text: "Peak renders forms and mail templates dynamically so you can add as many forms as you'd like, just by creating them in the CP. Peak ships with a default basic contact form you can edit."
         label: 'Send a form'
@@ -52,6 +55,7 @@ page_builder:
         entry: 5c526dbf-9dd7-4c52-98d8-54e00ebddfb6
         button_type: inline
       -
+        id: 9YmQzRX6
         title: 'Long form content'
         text: 'For long form content you can use the Article content block. This is a Bard fieldtypeopen in new window with multiple sets of fields that are regularly used in longer articles.'
         label: 'Read an article'
@@ -60,6 +64,7 @@ page_builder:
         entry: 20f6a148-63b8-47a8-9b0e-d57095d78c21
         button_type: inline
       -
+        id: mRREVSbW
         title: 'Way more features'
         text: 'Professional SEO, social image generation, responsive assets, appearance globals, favicons generation, search templates, dark mode support with toggle, pagination template, search and additional bottles of oxygen.'
         label: 'Scavenge the docs'
@@ -69,5 +74,5 @@ page_builder:
         button_type: inline
     type: link_blocks
     enabled: true
-published: true
+template: articles
 ---

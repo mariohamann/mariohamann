@@ -1,8 +1,32 @@
 {
   "resources/css/site.css": {
-    "file": "assets/site-03e79a5f.css",
+    "file": "assets/site-5b89dfce.css",
     "isEntry": true,
     "src": "resources/css/site.css"
+  },
+  "resources/fonts/b612-v12-latin-700.woff2": {
+    "file": "assets/b612-v12-latin-700-656168a3.woff2",
+    "src": "resources/fonts/b612-v12-latin-700.woff2"
+  },
+  "resources/fonts/b612-v12-latin-700italic.woff2": {
+    "file": "assets/b612-v12-latin-700italic-ae36f6c8.woff2",
+    "src": "resources/fonts/b612-v12-latin-700italic.woff2"
+  },
+  "resources/fonts/b612-v12-latin-italic.woff2": {
+    "file": "assets/b612-v12-latin-italic-996d6025.woff2",
+    "src": "resources/fonts/b612-v12-latin-italic.woff2"
+  },
+  "resources/fonts/b612-v12-latin-regular.woff2": {
+    "file": "assets/b612-v12-latin-regular-4c79ea59.woff2",
+    "src": "resources/fonts/b612-v12-latin-regular.woff2"
+  },
+  "resources/fonts/martian-mono-v3-latin-800.woff2": {
+    "file": "assets/martian-mono-v3-latin-800-c7894aae.woff2",
+    "src": "resources/fonts/martian-mono-v3-latin-800.woff2"
+  },
+  "resources/fonts/martian-mono-v3-latin-regular.woff2": {
+    "file": "assets/martian-mono-v3-latin-regular-2cc63140.woff2",
+    "src": "resources/fonts/martian-mono-v3-latin-regular.woff2"
   },
   "resources/js/site.js": {
     "file": "assets/site-380e8584.js",
