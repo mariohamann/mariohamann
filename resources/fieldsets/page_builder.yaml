@@ -41,6 +41,18 @@ fields:
               fields:
                 -
                   import: article
+            articles:
+              display: Articles
+              instructions: 'List the most recent Articles.'
+              fields:
+                -
+                  import: articles
+            index_content:
+              display: 'Index content'
+              instructions: 'Render the currently mounted entries if available.'
+              fields:
+                -
+                  import: index_content
       instructions_position: above
       visibility: visible
       previews: true

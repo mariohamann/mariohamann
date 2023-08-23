@@ -5,6 +5,14 @@
             
                 <url>
                     <loc>https://mariohamann.de</loc>
+                    <lastmod>2023-08-22</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.5</priority>
+                    
+                </url>
+            
+                <url>
+                    <loc>https://mariohamann.de/home</loc>
                     <lastmod>2023-08-18</lastmod>
                     <changefreq>weekly</changefreq>
                     <priority>0.5</priority>

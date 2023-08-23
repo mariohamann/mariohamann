@@ -1,0 +1,47 @@
+{{#
+@name Articles index
+@desc The Articles index template.
+#}}
+
+<!-- /articles/index.antlers.html -->
+<main class="outer-grid" id="content">
+    {{ page_builder scope="block" }}
+    {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>
+<!-- End: /articles/index.antlers.html -->
+
+{{ section:index_content }}
+<!-- /articles/index.antlers.html -->
+<div class="fluid-container grid md:grid-cols-12 gap-8">
+    <div
+        class="relative flex items-center gap-x-6 md:col-span-12 md:mb-4 lg:mb-6">
+        <img
+            src="./visuals/mh-red.jpg"
+            alt class="h-24 w-24 rounded-full flex-shrink-0 bg-neutral-50">
+        <hgroup>
+
+            {{ partial:typography/h1 content="Mario Hamann" class="md:col-span-12 text-xl font-mono font-bold tracking-tight text-secondary sm:text-2xl"
+            }}
+            <p class="mt-1 text-md leading-8 text-neutral-600"
+                role="doc-subtitle">Creative Developer, Musician</p></hgroup>
+    </div>
+
+    {{ collection:articles sort="date:desc" paginate="true" limit="12" as="items"
+    }}
+    {{ unless no_results }}
+    {{ items }}
+    {{ partial:components/articles_item class="md:col-span-4" }}
+    {{ /items }}
+    {{ else }}
+    <div class="md:col-span-6">
+        {{ trans:strings.no_results }}
+    </div>
+    {{ /unless }}
+
+    {{ partial:statamic-peak-tools::components/pagination class="md:col-span-12"
+    }}
+    {{ /collection:articles }}
+</div>
+<!-- End: /articles/index.antlers.html -->
+{{ /section:index_content }}

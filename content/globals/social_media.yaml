@@ -12,3 +12,8 @@ data:
       handle: 'https://indieweb.social/@mariohamann'
       type: mastodon
       enabled: true
+    -
+      id: llnp0b6y
+      handle: ./feed/articles
+      type: rss
+      enabled: true

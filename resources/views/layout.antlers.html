@@ -16,6 +16,8 @@
         {{ partial:statamic-peak-browser-appearance::snippets/browser_appearance
         }}
         {{ partial:statamic-peak-tools::snippets/live_preview }}
+        <link rel="alternate" type="application/rss+xml" title="Articles Feed"
+            href="{{ config:app:url }}/feed/articles" />
     </head>
     <body
         class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white">

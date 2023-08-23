@@ -142,4 +142,9 @@ return [
 
     'custom_css_url' => env('STATAMIC_CUSTOM_CSS_URL', null),
 
+    [
+        'type' => 'collection',
+        'collection' => 'articles',
+        'width' => 50
+    ],
 ];

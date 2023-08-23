@@ -1,9 +1,9 @@
 title: Articles
-template: article
+template: articles/show
 layout: layout
-mount: home
+mount: d11a5ec8-9915-4528-8cfe-e282362ef9ee
 revisions: false
-route: '{slug}'
+route: '/{slug}'
 date: true
 sort_dir: desc
 date_behavior:
@@ -13,4 +13,4 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
-    refresh: true
+    refresh: false

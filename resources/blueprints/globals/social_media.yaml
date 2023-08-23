@@ -1,13 +1,11 @@
 tabs:
   social_media:
-    display: 'Social Media'
+    display: "Social Media"
     sections:
-      -
-        display: 'Social media'
-        instructions: 'Configure social media links.'
+      - display: "Social media"
+        instructions: "Configure social media links."
         fields:
-          -
-            handle: social_media
+          - handle: social_media
             field:
               sets:
                 main:
@@ -20,8 +18,7 @@ tabs:
                       instructions: null
                       icon: social-mail-send-email-message
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
@@ -29,98 +26,87 @@ tabs:
                             listable: hidden
                             display: Email
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'mailto:'
+                            default: "mailto:"
                     facebook:
                       display: Facebook
                       instructions: null
                       icon: social-facebook
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.facebook.com/'
+                            prepend: "https://www.facebook.com/"
                             display: Handle
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.facebook.com/'
+                            default: "https://www.facebook.com/"
                     github:
                       display: GitHub
                       instructions: null
                       icon: social-github
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.github.com/'
+                            prepend: "https://www.github.com/"
                             display: Handle
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.github.com/'
+                            default: "https://www.github.com/"
                     instagram:
                       display: Instagram
                       instructions: null
                       icon: social-instagram
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.instagram.com/'
+                            prepend: "https://www.instagram.com/"
                             display: Handle
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.instagram.com/'
+                            default: "https://www.instagram.com/"
                     linkedin:
                       display: LinkedIn
                       instructions: null
                       icon: social-linkedin
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.linkedin.com/'
+                            prepend: "https://www.linkedin.com/"
                             display: Handle
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.linkedin.com/'
+                            default: "https://www.linkedin.com/"
                     mastodon:
                       display: Mastodon
                       instructions: null
-                      icon: social-mastodon
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
@@ -133,65 +119,72 @@ tabs:
                       instructions: null
                       icon: social-pinterest
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.pinterest.com/'
+                            prepend: "https://www.pinterest.com/"
                             display: URL
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.pinterest.com/'
+                            default: "https://www.pinterest.com/"
+                    rss:
+                      display: RSS
+                      instructions: null
+                      icon: social-rss
+                      fields:
+                        - handle: handle
+                          field:
+                            input_type: text
+                            type: text
+                            localizable: true
+                            listable: hidden
+                            display: URL
+                            validate: required
                     vimeo:
                       display: Vimeo
                       instructions: null
                       icon: social-vimeo
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.vimeo.com/'
+                            prepend: "https://www.vimeo.com/"
                             display: Handle
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.vimeo.com/'
+                            default: "https://www.vimeo.com/"
                     youtube:
                       display: YouTube
                       instructions: null
                       icon: social-youtube
                       fields:
-                        -
-                          handle: handle
+                        - handle: handle
                           field:
                             input_type: text
                             type: text
                             localizable: true
                             listable: hidden
-                            prepend: 'https://www.youtube.com/'
+                            prepend: "https://www.youtube.com/"
                             display: Handle
                             validate: required
-                        -
-                          handle: prefix
+                        - handle: prefix
                           field:
                             type: hidden
-                            default: 'https://www.youtube.com/'
+                            default: "https://www.youtube.com/"
               type: replicator
               listable: hidden
               localizable: true
-              display: 'Social media'
+              display: "Social media"
               instructions_position: above
               visibility: visible
               collapse: false
