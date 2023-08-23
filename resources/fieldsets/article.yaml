@@ -27,8 +27,6 @@ fields:
       listable: hidden
       display: Article
       replicator_preview: false
-      validate:
-        - required
       sets:
         interactive:
           display: Interactive
@@ -93,3 +91,5 @@ fields:
       smart_typography: true
       inline: false
       hide_display: false
+      word_count: false
+      always_show_set_button: false
