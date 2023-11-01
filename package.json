@@ -5,8 +5,7 @@
         "watch": "vite",
         "sync": "VITE_BROWSERSYNC=true vite",
         "build": "vite build",
-        "production": "vite build",
-        "ssg": "APP_URL=https://mariohamann.de vite build && APP_URL=https://mariohamann.de php please ssg:generate"
+        "production": "vite build"
     },
     "author": "Studio 1902",
     "license": "MIT",
