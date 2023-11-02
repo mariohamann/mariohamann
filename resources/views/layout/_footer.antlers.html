@@ -28,7 +28,7 @@
             <a
                 class="p-1 -m-1 text-neutral hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary"
                 href="{{ prefix }}{{ handle }}"
-                rel="noopener{{ type == 'mastodon' ?= ' me' }}"
+                rel="noopener{{ (type == 'mastodon' || type == 'github') ?= ' me' }}"
                 aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
                 target="_blank">{{ svg :src="type" class="w-5 h-5 overflow-visible fill-current"
                 alt="" aria-hidden="true" sanitize="true" }}</a>
