@@ -32,6 +32,9 @@
 </script>
 <main class="outer-grid" id="content">
     <div class="fluid-container grid md:grid-cols-12 ">
+    <div><a href="{{ site:url }}"
+                class="mb-8 lg:mb-0 text-sm block font-medium text-gray-500 hover:text-gray-700 transition-colors">←
+    Home</a></div>
     <article
         class="md:col-span-8 md:col-start-3 mb-10 space-y-16 border-b border-neutral-200 pb-10 sm:mb-16 sm:pb-16">
         <header>
@@ -67,12 +70,8 @@
     </article>
 
         <div class="md:col-span-8 md:col-start-3 ">
-            <a href="{{ site:url }}"
-                class="text-sm block font-medium text-gray-500 hover:text-gray-700">←
-                Home</a>
-
-            <div class="mt-12">
-                {{ partial:components/about }}</div>
+                <a class="block hover:opacity-80 transition-opacity" href="{{ site:url }}">
+                {{ partial:components/about }}</a>
 
             {{# {{ collection:previous in="articles" sort="date:asc" limit="3"
             as="items"

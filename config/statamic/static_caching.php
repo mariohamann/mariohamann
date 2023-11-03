@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'strategy' => 'full',
+    'strategy' => env('STATAMIC_STATIC_CACHING_STRATEGY', 'half'),
 
     /*
     |--------------------------------------------------------------------------

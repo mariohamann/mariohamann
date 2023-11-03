@@ -1,0 +1,54 @@
+.shiki {
+    counter-reset: step;
+    counter-increment: step 0;
+
+    .line {
+        &::before {
+            user-select: none;
+            content: counter(step);
+            counter-increment: step;
+            width: 1rem;
+            margin-right: 1.5rem;
+            display: inline-block;
+            text-align: right;
+            color: rgba(115, 138, 148, 0.4);
+        }
+
+        &.sh--highlight {
+            background: #ff02;
+            box-shadow: inset 0.5rem 0 0 #ff0;
+        }
+
+        &:last-of-type {
+            display: none;
+        }
+
+        &.add::before {
+            content: "+";
+            color: #487e02;
+        }
+
+        &.del::before {
+            content: "-";
+            color: #f00;
+        }
+
+        &.add {
+            background-color: hsl(136, 100%, 96%);
+            padding: 3px 0;
+            box-shadow: inset 4px 0 0 hsl(136, 100%, 70%);
+        }
+
+        &.del {
+            background-color: hsl(354, 100%, 96%);
+            padding: 3px 0;
+            box-shadow: inset 4px 0 0 hsl(354, 100%, 70%);
+            counter-increment: step -1;
+        }
+    }
+
+    > .highlight {
+        background-color: hsl(197, 88%, 94%);
+        padding: 3px 0;
+    }
+}
