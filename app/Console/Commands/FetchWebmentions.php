@@ -29,6 +29,8 @@ class FetchWebmentions extends Command
                 'page' => $page,
             ]);
 
+            $this->option('debug') && dump($response->json());
+
             if ($response->successful()) {
                 $mentions = collect($response->json('children'));
                 $allMentions = $allMentions->concat($mentions);
