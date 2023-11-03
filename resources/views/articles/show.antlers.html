@@ -67,24 +67,31 @@
 
             <div class="space-y-4">
     <!-- Likes -->
+    {{ webmentions :slug="slug" }}
+        {{ if mentions | length > 0 }}
     <div class="text-sm flex gap-8 border-b border-gray-200 pb-8 mb-10">
     {{ webmentions :slug="slug" wm-property="like-of" }}
+        {{ if mentions | length > 0 }}
         <div class="flex items-center">
             <sl-icon name="heart" class="text-gray-700"></sl-icon>
             <span class="ml-2">Likes: {{ mentions | length }}</span>
         </div>
+        {{ /if }}
     {{ /webmentions }}
 
     <!-- Reposts -->
     {{ webmentions :slug="slug" wm-property="repost-of" }}
+        {{ if mentions | length > 0 }}
         <div class="flex items-center">
             <sl-icon name="arrow-repeat" class="text-gray-700"></sl-icon>
             <span class="ml-2">Reposts: {{ mentions | length }}</span>
         </div>
+        {{ /if }}
     {{ /webmentions }}
 
     <!-- Comments -->
     {{ webmentions :slug="slug" wm-property="in-reply-to" }}
+        {{ if mentions | length > 0 }}
         <div class="flex items-center">
             <sl-icon name="chat-left" class="text-gray-700"></sl-icon>
             <span class="ml-2">Comments: {{ mentions | length }}</span>
@@ -108,8 +115,11 @@
                 </div>
             {{ /mentions }}
         </div>
+        {{ /if }}
     {{ /webmentions }}
 </div>
+{{ /if }}
+{{ /webmentions }}
             </article>
 
 
