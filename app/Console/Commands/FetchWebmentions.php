@@ -22,7 +22,7 @@ class FetchWebmentions extends Command
         do {
             $response = Http::get('https://webmention.io/api/mentions.jf2', [
                 'domain' => 'mariohamann.com',
-                'token' => env('WEBMENTION_IO_TOKEN'),
+                'token' => env('WEBMENTION_IO_TOKEN', 'jk2GJWBtNbtsW82RE7ab7g'),
                 'sort-dir' => 'up',
                 'sort-by' => 'published',
                 'per-page' => $perPage,
