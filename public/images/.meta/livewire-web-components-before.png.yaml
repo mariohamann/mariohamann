@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Screenshot of Website with a bunch of form related Web Components'
 size: 120402
 last_modified: 1698993237
 width: 1280

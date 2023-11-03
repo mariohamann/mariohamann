@@ -1,7 +1,7 @@
 .shiki {
     counter-reset: step;
     counter-increment: step 0;
-
+    overflow: scroll;
     .line {
         &::before {
             user-select: none;
