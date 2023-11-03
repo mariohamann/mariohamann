@@ -17,3 +17,5 @@ yarn-error.log
 
 /users
 /storage/forms
+
+**/.DS_Store
