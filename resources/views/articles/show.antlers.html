@@ -31,119 +31,125 @@
     }
 </script>
 <main class="outer-grid" id="content">
-        <div class="fluid-container grid grid-cols-12 ">
-            <div class="col-span-12 md:col-span-2 "><a href="{{ site:url }}"
-                    class="mb-8 lg:mb-0 text-sm block font-medium text-gray-500 hover:text-gray-700 transition-colors">←
-                    Home</a></div>
-            <article
-                class="prose col-span-12 md:col-span-8 md:col-start-3 mb-10 space-y-16 border-b border-neutral-200 pb-10 sm:mb-16 sm:pb-8">
-                <header>
-                    {{ partial:typography/time :content="date" class="block text-neutral-500"
-                    }}
+    <div class="fluid-container grid grid-cols-12 ">
+        <div class="col-span-12 md:col-span-2 "><a href="{{ site:url }}"
+                class="mb-8 lg:mb-0 text-sm block font-medium text-gray-500 hover:text-gray-700 transition-colors">←
+                Home</a></div>
+        <article
+            class="prose col-span-12 md:col-span-8 md:col-start-3 mb-10 space-y-16 border-b border-neutral-200 pb-10 sm:mb-16 sm:pb-8">
+            <header>
+                {{ partial:typography/time :content="date" class="block text-neutral-500"
+                }}
 
-                    {{ partial:typography/h1 :content="title" class="mt-6 mb-12 text-2xl font-mono font-bold tracking-tight text-secondary sm:text-3xl"
-                    }}
+                {{ partial:typography/h1 :content="title" class="mt-6 mb-12 text-2xl font-mono font-bold tracking-tight text-secondary sm:text-3xl"
+                }}
 
-                    <figure class="mt-4">
-                        {{ partial:statamic-peak-tools::components/picture
-                        :image="image"
-                        sizes="(min-width: 1280px) 1150px, (min-width: 768px) 90vw"
-                        aspect_ratio="3/2" lazy="true" cover="true" class="aspect-[3/2]"
-                        }}
-                    </figure>
-                </header>
-                {{# iterate over content replicator #}}
-                {{ content }}
-                {{ if type == "set_markdown" }}
-                <section class="mt-5 md:col-span-12 md:col-start-3">
-                    {{ markdown | markdown }}
-                </section>
-                {{ else }}
-                {{ article }}
-                {{ partial src="components/{type}" }}
-                {{ /article }}
-                {{ /if }}
-                {{ /content }}
+                <figure class="mt-4">
+                    {{ partial:statamic-peak-tools::components/picture
+                    :image="image"
+                    sizes="(min-width: 1280px) 1150px, (min-width: 768px) 90vw"
+                    aspect_ratio="3/2" lazy="true" cover="true" class="aspect-[3/2]"
+                    }}
+                </figure>
+            </header>
+            {{# iterate over content replicator #}}
+            {{ content }}
+            {{ if type == "set_markdown" }}
+            <section class="mt-5 md:col-span-12 md:col-start-3">
+                {{ markdown | markdown }}
+            </section>
+            {{ else }}
+            {{ article }}
+            {{ partial src="components/{type}" }}
+            {{ /article }}
+            {{ /if }}
+            {{ /content }}
 
             <div class="space-y-4">
-    <!-- Likes -->
-    {{ webmentions :slug="slug" }}
-        {{ if mentions | length > 0 }}
-    <div class="text-sm flex gap-8 border-b border-gray-200 pb-8 mb-10">
-    {{ webmentions :slug="slug" wm-property="like-of" }}
-        {{ if mentions | length > 0 }}
-        <div class="flex items-center">
-            <sl-icon name="heart" class="text-gray-700"></sl-icon>
-            <span class="ml-2">Likes: {{ mentions | length }}</span>
-        </div>
-        {{ /if }}
-    {{ /webmentions }}
+                <!-- Likes -->
+                {{ webmentions :slug="slug" }}
+                {{ if mentions | length > 0 }}
+                <div
+                    class="text-sm flex gap-8 border-b border-gray-200 pb-8 mb-10">
+                    {{ webmentions :slug="slug" wm-property="like-of" }}
+                    {{ if mentions | length > 0 }}
+                    <div class="flex items-center">
+                        <sl-icon name="heart" class="text-gray-700"></sl-icon>
+                        <span class="ml-2">Likes: {{ mentions | length }}</span>
+                    </div>
+                    {{ /if }}
+                    {{ /webmentions }}
 
-    <!-- Reposts -->
-    {{ webmentions :slug="slug" wm-property="repost-of" }}
-        {{ if mentions | length > 0 }}
-        <div class="flex items-center">
-            <sl-icon name="arrow-repeat" class="text-gray-700"></sl-icon>
-            <span class="ml-2">Reposts: {{ mentions | length }}</span>
-        </div>
-        {{ /if }}
-    {{ /webmentions }}
+                    <!-- Reposts -->
+                    {{ webmentions :slug="slug" wm-property="repost-of" }}
+                    {{ if mentions | length > 0 }}
+                    <div class="flex items-center">
+                        <sl-icon name="arrow-repeat" class="text-gray-700"></sl-icon>
+                        <span class="ml-2">Reposts: {{ mentions | length }}</span>
+                    </div>
+                    {{ /if }}
+                    {{ /webmentions }}
 
-    <!-- Comments -->
-    {{ webmentions :slug="slug" wm-property="in-reply-to" }}
-        {{ if mentions | length > 0 }}
-        <div class="flex items-center">
-            <sl-icon name="chat-left" class="text-gray-700"></sl-icon>
-            <span class="ml-2">Comments: {{ mentions | length }}</span>
-        </div>
-        </div>
-
-        <!-- Comments List -->
-        <div>
-            {{ mentions }}
-                <div class="not-prose">
-                    <a href="{{ url }}" target="_blank" rel="noopener" class="gap-4 no-underline">
-                        <div class="flex-none flex items-center">
-                            <div class=" w-12"><sl-avatar style="--size: 32px" initials="{{ author.name | replace('????') | initials:2 }}" label="Avatar with initials: {{ author.name | initials:2 }}"></sl-avatar>
-                            </div>
-                            <p class="font-semibold">{{ author.name | replace('????') }}</p>
-                        </div>
-                        <div class="pl-12 flex-grow">
-                            <p class="text-sm text-gray-800 leading-relaxed">{{ content.text | remove_initial_mentions | replace('????') }}</p>
-                        </div>
-                    </a>
+                    <!-- Comments -->
+                    {{ webmentions :slug="slug" wm-property="in-reply-to" }}
+                    {{ if mentions | length > 0 }}
+                    <div class="flex items-center">
+                        <sl-icon name="chat-left" class="text-gray-700"></sl-icon>
+                        <span class="ml-2">Comments: {{ mentions | length }}</span>
+                    </div>
                 </div>
-            {{ /mentions }}
-        </div>
-        {{ /if }}
-    {{ /webmentions }}
-</div>
-{{ /if }}
-{{ /webmentions }}
-            </article>
 
-
-            <div class="md:col-span-8 md:col-start-3 ">
-                <a class="block hover:opacity-80 transition-opacity"
-                    href="{{ site:url }}">
-                    {{ partial:components/about }}</a>
-
-                {{# {{ collection:previous in="articles" sort="date:asc" limit="3"
-                as="items"
-                }}
-                {{ unless no_results }}
-                <section class="fluid-container grid md:grid-cols-12 gap-8">
-                    {{ partial:typography/h1 as="h2" content="{ trans:strings.articles_more }"
-                    class="md:col-span-12" }}
-
-                    {{ items }}
-                    {{ partial:components/articles_item class="md:col-span-4" }}
-                    {{ /items }}
-                </section>
-                {{ /unless }}
-                {{ /collection:previous }} #}}
+                <!-- Comments List -->
+                <div>
+                    {{ mentions }}
+                    <div class="not-prose">
+                        <a href="{{ url }}" target="_blank" rel="noopener"
+                            class="gap-4 no-underline">
+                            <div class="flex-none flex items-center">
+                                <div class=" w-12"><sl-avatar
+                                        style="--size: 32px"
+                                        initials="{{ author.name | replace('????') | initials:2 }}"
+                                        label="Avatar with initials: {{ author.name | initials:2 }}"></sl-avatar>
+                                </div>
+                                <p class="font-semibold">{{ author.name |
+                                    replace('????') }}</p>
+                            </div>
+                            <div class="pl-12 flex-grow">
+                                <p class="text-sm text-gray-800 leading-relaxed">{{
+                                    content.text | remove_initial_mentions |
+                                    replace('????') }}</p>
+                            </div>
+                        </a>
+                    </div>
+                    {{ /mentions }}
+                </div>
+                {{ /if }}
+                {{ /webmentions }}
             </div>
+            {{ /if }}
+            {{ /webmentions }}
+        </article>
+
+        <div class="md:col-span-8 md:col-start-3 ">
+            <a class="block hover:opacity-80 transition-opacity"
+                href="{{ site:url }}">
+                {{ partial:components/about }}</a>
+
+            {{# {{ collection:previous in="articles" sort="date:asc" limit="3"
+            as="items"
+            }}
+            {{ unless no_results }}
+            <section class="fluid-container grid md:grid-cols-12 gap-8">
+                {{ partial:typography/h1 as="h2" content="{ trans:strings.articles_more }"
+                class="md:col-span-12" }}
+
+                {{ items }}
+                {{ partial:components/articles_item class="md:col-span-4" }}
+                {{ /items }}
+            </section>
+            {{ /unless }}
+            {{ /collection:previous }} #}}
         </div>
-    </main>
-</div>
+    </div>
+</main>
 <!-- /articles/show.antlers.html -->
