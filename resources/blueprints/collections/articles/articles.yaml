@@ -161,3 +161,20 @@ tabs:
               mode: grid
               listable: true
               width: 100
+          -
+            handle: mastodon_status
+            field:
+              mode: keyed
+              keys:
+                id: null
+                replies_count: null
+                reblogs_count: null
+                favourites_count: null
+              type: array
+              display: 'Mastodon Status'
+              icon: array
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

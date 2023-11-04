@@ -65,69 +65,43 @@
             {{ /if }}
             {{ /content }}
 
-            <div class="space-y-4">
-                <!-- Likes -->
-                {{ webmentions :slug="slug" }}
-                {{ if mentions | length > 0 }}
+            <!-- Likes -->
+            {{ mastodon_status }}
+            {{ if id }}
+            <div
+                class="not-prose flex flex-col sm:flex-row pt-12  pb-8 gap-4 sm:gap-10 sm:items-center"">
+
+                <h2 class="text-base italic">Reactions on <a
+                        class="underline cursor-pointer"
+                        href="https://indieweb.social/@mariohamann/{{ id }}">Mastodon
+                        Post</a>:</h2>
                 <div
-                    class="text-sm flex gap-8 border-b border-gray-200 pb-8 mb-10">
-                    {{ webmentions :slug="slug" wm-property="like-of" }}
-                    {{ if mentions | length > 0 }}
+                    class="text-sm flex gap-8  border-gray-200">
                     <div class="flex items-center">
-                        <sl-icon name="heart" class="text-gray-700"></sl-icon>
-                        <span class="ml-2">Likes: {{ mentions | length }}</span>
+                        <sl-icon name="heart"
+                            class="text-gray-700 mr-2 text-base flex-shrink-0"
+                            label="Favorites"></sl-icon>{{ favourites_count }}
                     </div>
-                    {{ /if }}
-                    {{ /webmentions }}
 
                     <!-- Reposts -->
-                    {{ webmentions :slug="slug" wm-property="repost-of" }}
-                    {{ if mentions | length > 0 }}
                     <div class="flex items-center">
-                        <sl-icon name="arrow-repeat" class="text-gray-700"></sl-icon>
-                        <span class="ml-2">Reposts: {{ mentions | length }}</span>
+                        <sl-icon name="arrow-repeat"
+                            class="text-gray-700 mr-2 text-base flex-shrink-0"
+                            label="Reposts"></sl-icon>
+                        {{ reblogs_count }}
                     </div>
-                    {{ /if }}
-                    {{ /webmentions }}
 
                     <!-- Comments -->
-                    {{ webmentions :slug="slug" wm-property="in-reply-to" }}
-                    {{ if mentions | length > 0 }}
                     <div class="flex items-center">
-                        <sl-icon name="chat-left" class="text-gray-700"></sl-icon>
-                        <span class="ml-2">Comments: {{ mentions | length }}</span>
+                        <sl-icon name="chat-left"
+                            class="text-gray-700 mr-2 text-base flex-shrink-0"
+                            label="Replies"></sl-icon>
+                        {{ replies_count }}
                     </div>
                 </div>
-
-                <!-- Comments List -->
-                <div>
-                    {{ mentions }}
-                    <div class="not-prose">
-                        <a href="{{ url }}" target="_blank" rel="noopener"
-                            class="gap-4 no-underline">
-                            <div class="flex-none flex items-center">
-                                <div class=" w-12"><sl-avatar
-                                        style="--size: 32px"
-                                        initials="{{ author.name | replace('????') | initials:2 }}"
-                                        label="Avatar with initials: {{ author.name | initials:2 }}"></sl-avatar>
-                                </div>
-                                <p class="font-semibold">{{ author.name |
-                                    replace('????') }}</p>
-                            </div>
-                            <div class="pl-12 flex-grow">
-                                <p class="text-sm text-gray-800 leading-relaxed">{{
-                                    content.text | remove_initial_mentions |
-                                    replace('????') }}</p>
-                            </div>
-                        </a>
-                    </div>
-                    {{ /mentions }}
-                </div>
-                {{ /if }}
-                {{ /webmentions }}
             </div>
             {{ /if }}
-            {{ /webmentions }}
+            {{ /mastodon_status }}
         </article>
 
         <div class="md:col-span-8 md:col-start-3 ">

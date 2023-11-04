@@ -11,6 +11,13 @@ class FetchWebmentions extends Command
     protected $signature = 'webmentions:fetch {--debug : Run in debug mode with verbose output}';
     protected $description = 'Fetch webmentions and save them into JSON files based on wm-target.';
 
+
+    /**
+     * Fetch webmentions and save them into JSON files based on wm-target.
+     *
+     * @deprecated
+     * @return void
+     */
     public function handle()
     {
         $this->info('Fetching webmentions...');

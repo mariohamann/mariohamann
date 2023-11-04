@@ -12,6 +12,7 @@ class Webmentions extends Tags
     /**
      * The {{ webmentions }} tag.
      *
+     * @deprecated
      * @return string|array
      */
     public function index()
