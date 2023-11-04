@@ -80,7 +80,8 @@
                     <div class="flex items-center">
                         <sl-icon name="heart"
                             class="text-gray-700 mr-2 text-base flex-shrink-0"
-                            label="Favorites"></sl-icon>{{ favourites_count }}
+                            label="Favorites"></sl-icon>{{ favourites_count ||
+                        '0' }}
                     </div>
 
                     <!-- Reposts -->
@@ -88,7 +89,7 @@
                         <sl-icon name="arrow-repeat"
                             class="text-gray-700 mr-2 text-base flex-shrink-0"
                             label="Reposts"></sl-icon>
-                        {{ reblogs_count }}
+                        {{ reblogs_count || '0' }}
                     </div>
 
                     <!-- Comments -->
@@ -96,7 +97,7 @@
                         <sl-icon name="chat-left"
                             class="text-gray-700 mr-2 text-base flex-shrink-0"
                             label="Replies"></sl-icon>
-                        {{ replies_count }}
+                        {{ replies_count || '0' }}
                     </div>
                 </div>
             </div>
