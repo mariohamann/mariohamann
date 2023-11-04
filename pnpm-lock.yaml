@@ -23,6 +23,9 @@ dependencies:
   focus-visible:
     specifier: ^5.2.0
     version: 5.2.0
+  pnpm:
+    specifier: ^8.10.2
+    version: 8.10.2
   puppeteer:
     specifier: ^21.0.3
     version: 21.0.3
@@ -1972,6 +1975,12 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
     dev: true
+
+  /pnpm@8.10.2:
+    resolution: {integrity: sha512-B4IJPVumx62UYggbwe8HdQFqS0EJ7KHh/tzqbxEBQ69fUJk9s2xCfU+oxivjkgoyJNsS2nGdJGyhndnxgEjDPA==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
 
   /portscanner@2.2.0:
     resolution: {integrity: sha512-IFroCz/59Lqa2uBvzK3bKDbDDIEaAY8XJ1jFxcLWTqosrsc32//P4VuSB2vZXoHiHqOmx8B5L5hnKOxL/7FlPw==}
