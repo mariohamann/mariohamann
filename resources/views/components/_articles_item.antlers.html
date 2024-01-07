@@ -17,10 +17,13 @@
         <div class="flex flex-col gap-y-2">
             {{ partial:typography/time :content="date" class="text-sm" }}
 
-            {{ partial:typography/h3 :content="title" class="mt-3 text-lg font-bold leading-6 text-secondary font-mono  group-hover:text-secondary-900 transition-colors"
+            {{ partial:typography/h3 :content="title"
+            class="mt-3 text-lg font-bold leading-6 text-secondary font-mono  group-hover:text-secondary-900 transition-colors"
             }}
 
             {{ partial:typography/p :content="teaser" }}
+
+            {{ partial:components/mastodon_status intro="false" }}
         </div>
     </a>
 </article>

@@ -1,0 +1,45 @@
+{{#
+@name Mastodon status
+@desc A Mastodon status component.
+@param intro Show an intro text.
+@param class Add additional classes.
+#}}
+
+{{ mastodon_status }}
+{{ if id }}
+<div
+    class="{{ class }} not-prose flex flex-col sm:flex-row pb-8 gap-4 sm:gap-10 sm:items-center"">
+    {{ if intro }}
+    <h2 class="text-base italic">Reactions on <a
+            class="underline cursor-pointer"
+            href="https://indieweb.social/@mariohamann/{{ id }}">Mastodon
+            Post</a>:</h2>
+    {{ /if intro }}
+    <div
+        class="text-sm flex gap-8  border-gray-200">
+        <div class="flex items-center">
+            <sl-icon name="heart"
+                class="text-gray-700 mr-2 text-base flex-shrink-0"
+                label="Favorites"></sl-icon>{{ favourites_count ||
+            '0' }}
+        </div>
+
+        <!-- Reposts -->
+        <div class="flex items-center">
+            <sl-icon name="arrow-repeat"
+                class="text-gray-700 mr-2 text-base flex-shrink-0"
+                label="Reposts"></sl-icon>
+            {{ reblogs_count || '0' }}
+        </div>
+
+        <!-- Comments -->
+        <div class="flex items-center">
+            <sl-icon name="chat-left"
+                class="text-gray-700 mr-2 text-base flex-shrink-0"
+                label="Replies"></sl-icon>
+            {{ replies_count || '0' }}
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ /mastodon_status }}
