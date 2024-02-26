@@ -14,8 +14,11 @@
         "@alpinejs/focus": "^3.12.3",
         "@alpinejs/morph": "^3.12.3",
         "@alpinejs/persist": "^3.12.3",
+        "@enhance/custom-element": "^1.2.1",
+        "@enhance/ssr": "^3.5.1",
         "alpinejs": "^3.12.3",
         "focus-visible": "^5.2.0",
+        "html-minifier": "^4.0.0",
         "puppeteer": "^21.0.3"
     },
     "devDependencies": {

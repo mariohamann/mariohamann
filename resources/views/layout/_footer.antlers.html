@@ -5,6 +5,23 @@
 
 <!-- /layout/_footer.antlers.html -->
 <footer class="w-full py-4 mt-auto">
+    <my-card>Test</my-card>
+    <super-slider unit="em"
+        target=".preview h1">
+        <label slot="label" for="title-size">Title font size</label>
+        <input slot="input" id="title-size" type="range" min="0.5" max="4"
+            step="0.1" value="2" />
+    </super-slider>
+    <super-slider unit="em" target=".preview h2">
+        <label slot="label">Subtitle font size</label>
+        <input slot="input" type="range" min="0.5" max="2.5" step="0.1"
+            value="1.5" />
+    </super-slider>
+
+    <div class="preview">
+        <h1>This is a title</h1>
+        <h2>This is a subtitle</h2>
+    </div>
     <div
         class="fluid-container flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:space-x-4 md:items-center ">
         <div
@@ -30,7 +47,8 @@
                 href="{{ prefix }}{{ handle }}"
                 rel="noopener{{ (type == 'mastodon' || type == 'github') ?= ' me' }}"
                 aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
-                target="_blank">{{ svg :src="type" class="w-5 h-5 overflow-visible fill-current"
+                target="_blank">{{ svg :src="type"
+                class="w-5 h-5 overflow-visible fill-current"
                 alt="" aria-hidden="true" sanitize="true" }}</a>
             {{ /social_media:social_media }}
         </div>

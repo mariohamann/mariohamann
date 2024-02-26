@@ -4,6 +4,8 @@ import morph from '@alpinejs/morph'
 import persist from '@alpinejs/persist'
 import focus from '@alpinejs/focus'
 import 'focus-visible'
+import '../../scripts/elements/super-slider.mjs';
+import '../../scripts/elements/my-card.mjs';
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
