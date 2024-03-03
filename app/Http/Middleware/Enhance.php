@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Symfony\Component\HttpFoundation\Response;
 use Extism\Plugin;
 use Extism\Manifest;
@@ -16,7 +17,7 @@ class Enhance
     {
         $response = $next($request);
 
-        // check if the request is for the control panel
+        // Exclude specific paths
         if (
             Str::startsWith($request->path(), "cp") ||
             Str::startsWith($request->path(), "api") ||
@@ -25,40 +26,41 @@ class Enhance
             return $response;
         }
 
-        // start time
+        // Generate cache key based on content and file hashes
+        $wasmPath = base_path("vendor/enhance/ssr-wasm/enhance-ssr.wasm");
+        $jsPath = base_path("node_modules/activity-graph/dist/activity-graph-wasm.js");
+        $cacheKey = md5($response->getContent() . filemtime($wasmPath) . filemtime($jsPath));
+
+        // Processing
         $start = microtime(true);
+        if (Cache::has($cacheKey)) {
+            $newResponse = Cache::get($cacheKey);
+            $response->setContent($newResponse);
+        } else {
 
-        $wasm = new PathWasmSource(base_path("vendor/enhance/ssr-wasm/enhance-ssr.wasm"));
-        $manifest = new Manifest($wasm);
-        $enhance = new Plugin($manifest, true);
+            $wasm = new PathWasmSource($wasmPath);
+            $manifest = new Manifest($wasm);
+            $enhance = new Plugin($manifest, true);
 
-        $input = [
-            "markup" => $response->getContent(),
-            "elements" => [
-                // get laravel root
-                "activity-graph" => Str::replaceFirst(
-                    'export default ',
-                    '',
-                    file_get_contents(base_path("node_modules/activity-graph/dist/activity-graph-wasm.js"))
-                ),
-            ],
+            $input = [
+                "markup" => $response->getContent(),
+                "elements" => [
+                    "activity-graph" => file_get_contents($jsPath),
+                ],
+            ];
 
-        ];
+            $json = json_encode($input);
+            $output = $enhance->call("ssr", $json);
+            $newResponse = json_decode($output)->document;
 
-        $json = json_encode($input);
+            // Cache the new response for future use
+            Cache::put($cacheKey, $newResponse, now()->addDays(7)); // Adjust cache duration as needed
 
-        $output = $enhance->call("ssr", $json);
+            $response->setContent($newResponse);
+        }
 
-        $newResponse = json_decode($output)->document;
-        $response->setContent($newResponse);
-
-        // end time
         $end = microtime(true);
-
-        // execution time in microseconds
         $execution_time = ($end - $start) * 1000;
-
-        // add header
         $response->header("X-Enhance-Execution-Time", $execution_time);
 
         return $response;
