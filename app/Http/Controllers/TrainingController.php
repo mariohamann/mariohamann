@@ -40,6 +40,11 @@ class TrainingController extends Controller
 
         $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
 
+        // get complete data, sort it and save it
+        $trainingsData = $activityGlobal->inDefaultSite()->get('trainings', []);
+        ksort($trainingsData);
+        $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
+
         return response()->json(['success' => 'Trainings updated successfully.']);
     }
 }

@@ -19,7 +19,7 @@ dependencies:
     version: 3.12.3
   activity-graph:
     specifier: github:mariohamann/activity-graph
-    version: github.com/mariohamann/activity-graph/5472f1f7711cc6dc6b258d53f22aad6b80ac34b8
+    version: github.com/mariohamann/activity-graph/79ba47af0fa018cbf78960565edfb38ddd638dc2
   alpinejs:
     specifier: ^3.12.3
     version: 3.12.3
@@ -2850,8 +2850,8 @@ packages:
       fd-slicer: 1.1.0
     dev: false
 
-  github.com/mariohamann/activity-graph/5472f1f7711cc6dc6b258d53f22aad6b80ac34b8:
-    resolution: {tarball: https://codeload.github.com/mariohamann/activity-graph/tar.gz/5472f1f7711cc6dc6b258d53f22aad6b80ac34b8}
+  github.com/mariohamann/activity-graph/79ba47af0fa018cbf78960565edfb38ddd638dc2:
+    resolution: {tarball: https://codeload.github.com/mariohamann/activity-graph/tar.gz/79ba47af0fa018cbf78960565edfb38ddd638dc2}
     name: '@mariohamann/activity-graph'
-    version: 0.0.7
+    version: 0.0.8
     dev: false
