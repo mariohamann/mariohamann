@@ -1,8 +1,4 @@
-{{#
-@name Articles show
-@desc The Articles show template.
-#}}
-
+{{# @name Articles show @desc The Articles show template. #}}
 <!-- /articles/show.antlers.html -->
 <script type="application/ld+json">
     {
@@ -31,67 +27,60 @@
     }
 </script>
 <main class="outer-grid" id="content">
-    <div class="fluid-container grid grid-cols-12 ">
-        <div class="col-span-12 md:col-span-2 "><a href="{{ site:url }}"
+    <div class="fluid-container grid grid-cols-12">
+        <div class="col-span-12 md:col-span-2">
+            <a href="{{ site:url }}"
                 class="mb-8 lg:mb-0 text-sm block font-medium text-gray-500 hover:text-gray-700 transition-colors">←
-                Home</a></div>
+                Home</a>
+        </div>
         <article
             class="prose col-span-12 md:col-span-8 md:col-start-3 mb-10 space-y-16 border-b border-neutral-200 pb-10 sm:mb-16 sm:pb-8">
             <header>
-                {{ partial:typography/time :content="date"
-                class="block text-neutral-500"
-                }}
-
-                {{ partial:typography/h1 :content="title"
-                class="mt-6 mb-12 text-2xl font-mono font-bold tracking-tight text-secondary sm:text-3xl"
-                }}
-
+                {{ partial:typography/time :content="date" class="block
+                                                                                        text-neutral-500" }}
+                {{ partial:typography/h1 :content="title" class="mt-6 mb-12 text-2xl font-mono font-bold tracking-tight
+                                                                                        text-secondary sm:text-3xl" }}
                 <figure class="mt-4">
-                    {{ partial:statamic-peak-tools::components/picture
-                    :image="image"
-                    sizes="(min-width: 1280px) 1150px, (min-width: 768px) 90vw"
-                    aspect_ratio="3/2" lazy="true" cover="true"
-                    class="aspect-[3/2]"
-                    }}
+                    {{ partial:statamic-peak-tools::components/picture :image="image" sizes="(min-width: 1280px) 1150px,
+                                                                                                                                (min-width: 768px) 90vw" aspect_ratio="3/2" lazy="true" cover="true" class="aspect-[3/2]" }}
                 </figure>
             </header>
             {{# iterate over content replicator #}}
             {{ content }}
-            {{ if type == "set_markdown" }}
-            <section class="mt-5 md:col-span-12 md:col-start-3">
-                {{ markdown | markdown }}
-            </section>
-            {{ else }}
-            {{ article }}
-            {{ partial src="components/{type}" }}
-            {{ /article }}
-            {{ /if }}
+                {{ if type == "set_markdown" }}
+                    <section class="mt-5 md:col-span-12 md:col-start-3">
+                        {{ markdown | markdown }}
+                    </section>
+                {{ elseif type == "set_code" }}
+                    <section class="mt-5 md:col-span-12 md:col-start-3">
+                        {{ code }}
+                    </section>
+                {{ else }}
+                    {{ article }}
+                        {{ partial src="components/{type}" }}
+                    {{ /article }}
+                {{ /if }}
             {{ /content }}
-
             {{ partial:components/mastodon_status intro="true" class="pt-12" }}
         </article>
 
-        <div
-            class="flex col-span-12 md:col-span-8 md:col-start-3 ">
-            <a class="block hover:opacity-80 transition-opacity"
-                href="{{ site:url }}">
-                {{ partial:components/about }}</a>
+        <div class="flex col-span-12 md:col-span-8 md:col-start-3">
+            <a class="block hover:opacity-80 transition-opacity" href="{{ site:url }}">
+                {{ partial:components/about }}
+            </a>
 
-            {{# {{ collection:previous in="articles" sort="date:asc" limit="3"
-            as="items"
-            }}
-            {{ unless no_results }}
-            <section class="fluid-container grid md:grid-cols-12 gap-8">
-                {{ partial:typography/h1 as="h2"
-                content="{ trans:strings.articles_more }"
-                class="md:col-span-12" }}
-
-                {{ items }}
-                {{ partial:components/articles_item class="md:col-span-4" }}
-                {{ /items }}
-            </section>
-            {{ /unless }}
-            {{ /collection:previous }} #}}
+            {{#
+                {{ collection:previous in="articles" sort="date:asc" limit="3" as="items" }}
+                    {{ unless no_results }}
+                        <section class="fluid-container grid md:grid-cols-12 gap-8">
+                            {{ partial:typography/h1 as="h2" content="{trans:strings.articles_more}" class="md:col-span-12" }}
+                            {{ items }}
+                                {{ partial:components/articles_item class="md:col-span-4" }}
+                            {{ /items }}
+                        </section>
+                    {{ /unless }}
+                {{ /collection:previous }}
+            #}}
         </div>
     </div>
 </main>

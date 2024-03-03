@@ -79,6 +79,31 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
+                    set_code:
+                      display: 'Dynamic Code'
+                      instructions: null
+                      icon: programming-script-code-brackets
+                      fields:
+                        -
+                          handle: code
+                          field:
+                            theme: material
+                            mode: handlebars
+                            mode_selectable: false
+                            indent_type: tabs
+                            indent_size: 4
+                            key_map: default
+                            line_numbers: true
+                            line_wrapping: true
+                            antlers: true
+                            type: code
+                            display: Code
+                            icon: code
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
               type: replicator
               display: Content
               icon: replicator
@@ -131,11 +156,11 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate:
+                - required
               generate: true
               listable: hidden
               display: Slug
-              validate:
-                - required
           -
             handle: date
             field:
