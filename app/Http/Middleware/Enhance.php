@@ -17,7 +17,11 @@ class Enhance
         $response = $next($request);
 
         // check if the request is for the control panel
-        if (Str::startsWith($request->path(), "cp")) {
+        if (
+            Str::startsWith($request->path(), "cp") ||
+            Str::startsWith($request->path(), "api") ||
+            !Str::contains($response->getContent(), "</activity-graph>")
+        ) {
             return $response;
         }
 
