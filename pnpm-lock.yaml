@@ -17,9 +17,9 @@ dependencies:
   '@alpinejs/persist':
     specifier: ^3.12.3
     version: 3.12.3
-  activity-graph:
-    specifier: github:mariohamann/activity-graph
-    version: github.com/mariohamann/activity-graph/a7b5cc4acb25b9d8ed9ffff698d81972d7bb5c51
+  '@mariohamann/activity-graph':
+    specifier: ^1.0.1
+    version: 1.0.1
   alpinejs:
     specifier: ^3.12.3
     version: 3.12.3
@@ -414,6 +414,10 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
+
+  /@mariohamann/activity-graph@1.0.1:
+    resolution: {integrity: sha512-4VSjarBFK6fy0UqtsMfELYK1W4iD9U0hdGSmKchFr3vBqq+Q13YfrC3vsnmVJQR8SIHfmE6fbF7FZs7+Annehg==}
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2848,10 +2852,4 @@ packages:
     dependencies:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
-    dev: false
-
-  github.com/mariohamann/activity-graph/a7b5cc4acb25b9d8ed9ffff698d81972d7bb5c51:
-    resolution: {tarball: https://codeload.github.com/mariohamann/activity-graph/tar.gz/a7b5cc4acb25b9d8ed9ffff698d81972d7bb5c51}
-    name: '@mariohamann/activity-graph'
-    version: 0.0.11
     dev: false

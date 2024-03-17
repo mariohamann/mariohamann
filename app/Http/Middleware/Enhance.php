@@ -28,7 +28,7 @@ class Enhance
 
         // Generate cache key based on content and file hashes
         $wasmPath = base_path("vendor/enhance/ssr-wasm/enhance-ssr.wasm");
-        $jsPath = base_path("node_modules/activity-graph/dist/activity-graph-wasm.js");
+        $jsPath = base_path("node_modules/@mariohamann/activity-graph/dist/activity-graph-wasm/en.min.js");
         $cacheKey = md5($response->getContent() . filemtime($wasmPath) . filemtime($jsPath));
 
         // Processing
