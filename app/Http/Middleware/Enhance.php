@@ -33,11 +33,10 @@ class Enhance
 
         // Processing
         $start = microtime(true);
-        if (Cache::has($cacheKey)) {
+        if (Cache::has($cacheKey) && env("ENHANCE_CACHING", true)) {
             $newResponse = Cache::get($cacheKey);
             $response->setContent($newResponse);
         } else {
-
             $wasm = new PathWasmSource($wasmPath);
             $manifest = new Manifest($wasm);
             $enhance = new Plugin($manifest, true);
@@ -53,7 +52,9 @@ class Enhance
             $output = $enhance->call("ssr", $json);
             $newResponse = json_decode($output)->document;
 
-            Cache::put($cacheKey, $newResponse, now()->addDays(7));
+            if (env("ENHANCE_CACHING", true)) {
+                Cache::put($cacheKey, $newResponse, now()->addDays(7));
+            }
 
             $response->setContent($newResponse);
         }
