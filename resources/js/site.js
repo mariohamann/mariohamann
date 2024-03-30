@@ -4,7 +4,6 @@ import morph from '@alpinejs/morph'
 import persist from '@alpinejs/persist'
 import focus from '@alpinejs/focus'
 import 'focus-visible'
-import '@mariohamann/activity-graph'
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
