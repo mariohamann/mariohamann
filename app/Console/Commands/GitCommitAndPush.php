@@ -33,6 +33,15 @@ class GitCommitAndPush extends Command
 
         $message = $this->argument('message');
 
+        $checkChanges = new Process(['git', 'status', '--porcelain']);
+        $checkChanges->setWorkingDirectory(base_path());
+        $checkChanges->run();
+
+        if (empty(trim($checkChanges->getOutput()))) {
+            $this->info('No changes detected. Skipping commit and push.');
+            return;
+        }
+
         $processes = [
             ['git', 'add', '.'],
             ['git', 'commit', '-m', $message],
@@ -44,13 +53,11 @@ class GitCommitAndPush extends Command
             $process->setWorkingDirectory(base_path());
             $process->run();
 
-            // Check and handle errors.
+            echo $process->getOutput();
+
             if (!$process->isSuccessful()) {
                 throw new ProcessFailedException($process);
             }
-
-            // Output the result of the command.
-            echo $process->getOutput();
         }
 
         $this->info('Git operations completed successfully!');
