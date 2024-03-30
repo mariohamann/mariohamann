@@ -18,3 +18,15 @@ blockquote {
         @apply mb-0;
     }
 }
+
+activity-graph figure {
+    @apply p-4 border rounded-md text-sm;
+}
+
+activity-graph .year {
+    @apply font-bold h-[1.75em];
+}
+
+activity-graph[i18n*="Meat"] {
+    --activity-graph-level-1-bg: oklch(64.6% 0.24 18.18 / var(--tw-bg-opacity));
+}
