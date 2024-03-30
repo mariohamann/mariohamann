@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Statamic\Facades\GlobalSet;
+use DateTime;
 
 class TrainingController extends Controller
 {
@@ -35,7 +36,22 @@ class TrainingController extends Controller
 
         // Update the 'trainings' data with new values
         foreach ($validated['data'] as $date => $uuid) {
-            $trainingsData[$date] = $uuid;
+            // Convert the date string to a DateTime object
+            $dateTime = new DateTime($date);
+
+
+            // Sometimes I'm getting to bed after midnight
+            // I want to count those trainings as the previous day
+            // Check if the time is between 00:00 and 04:00
+            if ((int)$dateTime->format('G') < 4) {
+                // Subtract one day
+                $dateTime->modify('-1 day');
+                // Set time to 23:59:59
+                $dateTime->setTime(23, 59, 59);
+            }
+
+            // Format the DateTime object back to the original format and store it
+            $trainingsData[$dateTime->format('Y-m-d\TH:i:sP')] = $uuid;
         }
 
         $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
