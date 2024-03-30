@@ -86,7 +86,7 @@
             "@composer addEnhanceSsrToVendor"
         ],
         "addEnhanceSsrToVendor": [
-            "mkdir -p vendor/enhance/ssr-wasm && cd \"$_\" && curl -L https://github.com/enhance-dev/enhance-ssr-wasm/releases/download/v0.0.4/enhance-ssr.wasm.gz | gunzip > enhance-ssr.wasm"
+            "mkdir -p vendor/enhance/ssr-wasm && cd vendor/enhance/ssr-wasm && curl -L https://github.com/enhance-dev/enhance-ssr-wasm/releases/download/v0.0.4/enhance-ssr.wasm.gz | gunzip > enhance-ssr.wasm"
         ]
     }
 }
