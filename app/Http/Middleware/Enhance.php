@@ -53,8 +53,7 @@ class Enhance
             $output = $enhance->call("ssr", $json);
             $newResponse = json_decode($output)->document;
 
-            // Cache the new response for future use
-            Cache::put($cacheKey, $newResponse, now()->addDays(7)); // Adjust cache duration as needed
+            Cache::put($cacheKey, $newResponse, now()->addDays(7));
 
             $response->setContent($newResponse);
         }
