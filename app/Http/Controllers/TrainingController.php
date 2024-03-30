@@ -34,11 +34,8 @@ class TrainingController extends Controller
 
         $trainingsData = $activityGlobal->inDefaultSite()->get('trainings', []);
 
-        // Update the 'trainings' data with new values
         foreach ($validated['data'] as $date => $uuid) {
-            // Convert the date string to a DateTime object
             $dateTime = new DateTime($date);
-
 
             // Sometimes I'm getting to bed after midnight
             // I want to count those trainings as the previous day
@@ -50,7 +47,6 @@ class TrainingController extends Controller
                 $dateTime->setTime(23, 59, 59);
             }
 
-            // Format the DateTime object back to the original format and store it
             $trainingsData[$dateTime->format('Y-m-d\TH:i:sP')] = $uuid;
         }
 
