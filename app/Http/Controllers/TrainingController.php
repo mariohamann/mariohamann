@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Statamic\Facades\GlobalSet;
 use DateTime;
+use App\Jobs\RefreshCacheJob;
 
 class TrainingController extends Controller
 {
@@ -32,30 +33,28 @@ class TrainingController extends Controller
             return response()->json(['error' => 'Global set not found'], 404);
         }
 
-        $trainingsData = $activityGlobal->inDefaultSite()->get('trainings', []);
+        $originalTrainingsData = $activityGlobal->inDefaultSite()->get('trainings', []);
+        $trainingsData = $originalTrainingsData;
 
         foreach ($validated['data'] as $date => $uuid) {
             $dateTime = new DateTime($date);
 
-            // Sometimes I'm getting to bed after midnight
-            // I want to count those trainings as the previous day
-            // Check if the time is between 00:00 and 04:00
+            // Adjust for late-night trainings
             if ((int)$dateTime->format('G') < 4) {
-                // Subtract one day
                 $dateTime->modify('-1 day');
-                // Set time to 23:59:59
                 $dateTime->setTime(23, 59, 59);
             }
 
             $trainingsData[$dateTime->format('Y-m-d\TH:i:sP')] = $uuid;
         }
 
-        $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
-
-        // get complete data, sort it and save it
-        $trainingsData = $activityGlobal->inDefaultSite()->get('trainings', []);
         ksort($trainingsData);
-        $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
+        $dataHasChanged = $originalTrainingsData !== $trainingsData;
+
+        if ($dataHasChanged) {
+            $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
+            RefreshCacheJob::dispatch(['/activity-graph-component']);
+        }
 
         return response()->json(['success' => 'Trainings updated successfully.']);
     }
