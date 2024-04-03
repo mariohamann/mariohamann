@@ -12,7 +12,7 @@ class TrainingController extends Controller
     public function update(Request $request)
     {
         // Check if API_TOKEN is set in env
-        if (!env('API_TOKEN')) {
+        if (!config('services.api.token')) {
             return response()->json(['error' => 'API token not set'], 500);
         }
 
