@@ -18,7 +18,7 @@ class TrainingController extends Controller
 
         // Check if the request has the correct token
         $token = $request->header('Authorization');
-        if ($token !== 'Bearer ' . config('API_TOKEN')) {
+        if ($token !== 'Bearer ' . config('services.api.token')) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
