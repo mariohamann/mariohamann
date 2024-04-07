@@ -18,6 +18,12 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        \Statamic\Events\EntrySaving::class => [
+            \App\Listeners\GenerateOpenGraphImageListener::class,
+        ],
+        \Statamic\Events\EntryDeleted::class => [
+            \App\Listeners\DeleteOpenGraphImageListener::class,
+        ],
     ];
 
     /**

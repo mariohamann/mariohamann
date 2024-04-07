@@ -14,5 +14,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 225d58b0-3de7-45fb-b9a6-a2f543c6834c
-updated_at: 1692744920
+updated_at: 1712522531
+og_title: 'Mario Hamann'
+og_description: 'Creative Developer, Musician'
 ---

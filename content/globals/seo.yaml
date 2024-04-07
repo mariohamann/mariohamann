@@ -3,10 +3,19 @@ data:
   noindex_local: true
   noindex_staging: true
   noindex_production: false
+  collection_defaults:
+    -
+      id: lupx5oq2
+      collection: articles
+      fallback: field
+      field_handle: teaser
   hreflang_auto: true
   json_ld_type: none
   breadcrumbs: false
-  use_social_image_generation: false
+  use_social_image_generation: true
+  social_images_collections:
+    - articles
+  og_image: home.jpg
   sitemap_collections:
     - pages
   trackers_local: false
