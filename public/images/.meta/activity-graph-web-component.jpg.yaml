@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Visualization of the setup between server and browser and activity-graph.js and activity-graph-element.js'
 size: 120350
-last_modified: 1711677253
+last_modified: 1711812194
 width: 1987
 height: 557
 mime_type: image/jpeg

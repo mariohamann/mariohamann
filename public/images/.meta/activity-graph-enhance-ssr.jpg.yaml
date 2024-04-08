@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Visualization of the setup between server and browser using enhance-ssr'
 size: 126615
-last_modified: 1711775443
+last_modified: 1711812194
 width: 1977
 height: 557
 mime_type: image/jpeg

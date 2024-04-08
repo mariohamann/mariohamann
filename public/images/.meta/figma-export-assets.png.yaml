@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'Screenshot from Figma: At the top a component called assetsLogos, which are annotated with ".SVG" and " .PNG". At the bottom overview of lots of icons which are annotated with ".SVG".'
 size: 138478
-last_modified: 1704638813
+last_modified: 1705389660
 width: 3000
 height: 1514
 mime_type: image/png
