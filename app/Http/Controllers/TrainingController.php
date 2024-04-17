@@ -54,6 +54,7 @@ class TrainingController extends Controller
         if ($dataHasChanged) {
             $activityGlobal->inDefaultSite()->set('trainings', $trainingsData)->save();
             RefreshCacheJob::dispatch(['/activity-graph-component']);
+            RefreshCacheJob::dispatch(['/training-data-from-ios-to-statamic']);
         }
 
         return response()->json(['success' => 'Trainings updated successfully.']);
