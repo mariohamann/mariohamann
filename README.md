@@ -38,4 +38,4 @@ Nowadays I'm more experienced in JavaScript, but I enjoy using PHP for backend s
 -   CSS: [Tailwind CSS](https://tailwindcss.com)
 -   Package Manager: [PNPM](https://pnpm.io)
 
-In also have quite some experience with [Inertia.js](https://inertiajs.com), [Alpine.js](https://alpinejs.dev), [Stencil.js](https://stenciljs.com), [Vue.js](https://vuejs.org) and [WordPress](https://wordpress.org).
+I also have quite some experience with [Inertia.js](https://inertiajs.com), [Alpine.js](https://alpinejs.dev), [Stencil.js](https://stenciljs.com), [Vue.js](https://vuejs.org) and [WordPress](https://wordpress.org).
