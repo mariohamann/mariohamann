@@ -1,4 +1,4 @@
-Hey there! 👋
+# 👋 Hi!
 
 I'm Mario from Freiburg, Germany. I studied to be a teacher for Music, German and Math, but work as Senior Software Engineer and Design System Architect at [Virtual Identity AG](https://www.virtual-identity.com/).
 
