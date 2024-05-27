@@ -4,7 +4,7 @@ I'm Mario from Freiburg, Germany. I studied to be a teacher for Music, German an
 
 ## 🎨 Design Systems
 
-I have a passion to work at the intersection of design and development. On result of that is my work on design systems:
+I have a passion to work at the intersection of design and development. One result of that is my work on design systems:
 
 -   [Synergy](https://github.com/synergy-design-system/synergy-design-system) for [SICK AG](https://www.sick.com)
 -   [Solid](https://github.com/solid-design-system/solid) for [Union Investment](https://www.union-investment.de)
