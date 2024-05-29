@@ -47,8 +47,8 @@ I'm most experienced in JavaScript, but enjoy using PHP for backend stuff much m
 -   CMS: [Statamic](https://statamic.com)
 -   Backend: [Laravel](https://laravel.com) + [Livewire](https://livewire.laravel.com/)
 -   SSG: [Astro](https://astro.build)
--   Web Components: [Lit](https://lit.dev), [@enhance/custom-element](https://www.npmjs.com/package/@enhance/custom-element)
+-   Web Components: [Lit](https://lit.dev)
 -   CSS: [TailwindCSS](https://tailwindcss.com)
 -   Package Manager: [PNPM](https://pnpm.io)
 
-I also worked a lot with with [Inertia.js](https://inertiajs.com), [Alpine.js](https://alpinejs.dev), [Stencil.js](https://stenciljs.com), [Vue.js](https://vuejs.org) and [WordPress](https://wordpress.org).
+I also worked a lot with [Inertia.js](https://inertiajs.com), [Alpine.js](https://alpinejs.dev), [Stencil.js](https://stenciljs.com), [Vue.js](https://vuejs.org), [WordPress](https://wordpress.org), [NX](https://nx.dev).
