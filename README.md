@@ -17,8 +17,8 @@ I love to experiment and enjoy sharing my thoughts and results:
 -   [Legend of Monomax](https://legend-of-monomax.mariohamann.com): Adventure about MonoMax, a modern but monolithic CMS – includes pixel art and self-made retro music
 -   [Figma Unleashed](https://indieweb.social/@mariohamann/112416525138793601): Run arbitrary JS from Figma prototypes
 -   [Activity Graph](https://mariohamann.com/activity-graph-component): How I built a web component for client side & Node-independent SSR utilizing Enhance, Extism, and WASM.
--   [Enhance SSR with WASM](https://github.com/mariohamann/enhance-ssr-wasm/tree/experiment/extism): What started as an experiment built the base for the Enhance team to run their [WASM strategy](https://enhance.dev/wasm)
--   [Live-Preview for Storyblok & Astro](https://github.com/mariohamann/storyblok-astro-live-preview-demo): What started as an experiment found its way into [Storyblok's Astro SDK](https://www.storyblok.com/mp/announcing-live-preview-for-storyblok-astro)
+-   [Enhance SSR with WASM](https://github.com/mariohamann/enhance-ssr-wasm/tree/experiment/extism): What started as a [discussion on Mastodon](https://indieweb.social/@mariohamann/111966166935508156) led into this experiment which layed the foundation for the Enhance team to run their [WASM strategy](https://enhance.dev/wasm)
+-   [Live-Preview for Storyblok & Astro](https://github.com/mariohamann/storyblok-astro-live-preview-demo): What started as an experiment led into a collaboration with the Storyblok team and found its way into [Storyblok's Astro SDK](https://www.storyblok.com/mp/announcing-live-preview-for-storyblok-astro)
 -   [more...](https://mariohamann.com)
 
 ## 📦 Packages
