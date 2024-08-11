@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Screenshot of the extension Allow CORS, where a custom rule is created for Access-Control-Allow-Origin which now points to "*"'
 size: 63973
 last_modified: 1723406885
 width: 2844

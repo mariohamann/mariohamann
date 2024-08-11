@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Screenshot of Visual Studio Code, where a single is changed by an added emoji'
 size: 311522
 last_modified: 1723406010
 width: 1024

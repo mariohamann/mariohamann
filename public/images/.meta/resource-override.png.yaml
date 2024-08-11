@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: "Screenshot of Resource Override's UI with two examples for redirects"
 size: 193908
 last_modified: 1723402533
 width: 1024

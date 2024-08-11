@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: "Screenshot of a website where the input field shows the additional emoji. At the bottom the redirect in the browser's network tab is visible."
 size: 101253
 last_modified: 1723407205
 width: 1024
