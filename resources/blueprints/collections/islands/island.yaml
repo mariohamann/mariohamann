@@ -12,7 +12,7 @@ tabs:
               validate:
                 - required
           -
-            handle: content
+            handle: head
             field:
               theme: material
               mode: handlebars
@@ -24,7 +24,27 @@ tabs:
               line_wrapping: true
               antlers: true
               type: code
-              display: Content
+              display: Head
+              icon: code
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: body
+            field:
+              theme: material
+              mode: handlebars
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: true
+              type: code
+              display: Body
               icon: code
               listable: hidden
               instructions_position: above
@@ -51,6 +71,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              instructions: 'Do not forget to add "slot=loading".'
   sidebar:
     display: Sidebar
     sections:
@@ -83,6 +104,18 @@ tabs:
               type: text
               display: 'Query Body'
               icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: lazy_loading
+            field:
+              default: false
+              type: toggle
+              display: 'Lazy Loading'
+              icon: toggle
               listable: hidden
               instructions_position: above
               visibility: visible

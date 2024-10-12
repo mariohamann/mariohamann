@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.0.2
     version: 1.0.2
   '@mariohamann/include-iframe':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^1.0.2
+    version: 1.0.2
   alpinejs:
     specifier: ^3.12.3
     version: 3.12.3
@@ -422,8 +422,8 @@ packages:
     resolution: {integrity: sha512-PlfhV3kYyhTvnCfwhjJOI8x1qizAvim3rcbesT+ryvtPZMCNEq4sYHBBZXGkJgoTmIihN5GgHHNs4QOkReyoTg==}
     dev: false
 
-  /@mariohamann/include-iframe@0.0.1:
-    resolution: {integrity: sha512-q0fl53M83s4A1h7efpJjbqv0KavcrYUKnK1wjfEy9FSXi9JvCG6BzECBDM9CSQUGDG0MrkSGjVRsy5XGKsETuQ==}
+  /@mariohamann/include-iframe@1.0.2:
+    resolution: {integrity: sha512-yqXHUgP+pxJNZAhtYyCBmaid8Sh3BYrJVZDzC/e47r+Z/wNE1tvyUvud8epOfTzJsUSkPkQq7mUCiKIttOgDUA==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:

@@ -64,7 +64,9 @@
                 <include-iframe query-head="{{ query_head }}"
                     query-body="{{ query_body }}">
                     <iframe src="{{ permalink }}" class="w-full h-96"
-                        title="Island"></iframe>
+                        title="{{ title }}"
+                        {{ if lazy_loading }}loading="lazy" {{ /if }}></iframe>
+                    {{ placeholder }}
                 </include-iframe>
                 {{ /island }}
             </section>

@@ -19,6 +19,9 @@ blockquote {
     }
 }
 
+/**
+ * <activity-graph>
+ */
 activity-graph figure {
     @apply p-4 border rounded-md text-sm;
 }
@@ -29,4 +32,41 @@ activity-graph .year {
 
 activity-graph[i18n*="Meat"] {
     --activity-graph-level-1-bg: oklch(64.6% 0.24 18.18 / var(--tw-bg-opacity));
+}
+
+/**
+ * <include-iframe>
+ */
+@media (scripting: enabled) {
+    include-iframe iframe {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px !important;
+    }
+}
+
+.skeleton {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    overflow: hidden;
+    background-color: #dddbdd;
+    animation: pulse 2s ease-in-out 0.5s infinite;
+    border-radius: 99999px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
