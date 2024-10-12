@@ -1,0 +1,18 @@
+title: Island
+fields:
+  -
+    handle: island
+    field:
+      max_items: 1
+      mode: default
+      create: false
+      collections:
+        - islands
+      type: entries
+      display: Island
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

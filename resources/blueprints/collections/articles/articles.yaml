@@ -104,6 +104,14 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
+                    set_island:
+                      display: Island
+                      instructions: null
+                      icon: nature-leaf
+                      fields:
+                        -
+                          handle: island
+                          field: island.island
               type: replicator
               display: Content
               icon: replicator
