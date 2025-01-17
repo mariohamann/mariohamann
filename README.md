@@ -2,7 +2,7 @@
 
 I'm Mario from Freiburg, Germany. I studied to be a teacher for Music, German and Math, but work as Principal Engineer and Design System Architect at [Virtual Identity AG](https://www.virtual-identity.com/).
 
-## 🎨 Design Systems
+## 🎯 Focus
 
 I have a passion to work at the intersection of design and development. One result of that is my work on design systems:
 
