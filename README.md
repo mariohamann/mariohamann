@@ -30,6 +30,7 @@ When solving problems, sometimes they are generic and useful enough to be extrac
 -   [activity-graph](https://mariohamann.github.io/activity-graph/): Web component to visualize data in style of GitHub's contribution graph
 -   [figma-export-assets](https://github.com/mariohamann/figma-export-assets): Highly customizable library for exporting assets from Figma API
 -   [vendorism](https://www.npmjs.com/package/vendorism): Utility to manage and override vendor files.
+-   [innclude-iframe](https://github.com/mariohamann/include-iframe):  Web component to load and inject content from external HTML files
 -   [more...](https://www.npmjs.com/~mariohamann)
 
 ## 🎬 Prototypes
