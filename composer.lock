@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "6db32c77fa46cb6c48032121b460f68e",
+  "content-hash": "f17dc420d81da6815864db45d7a4ee41",
   "packages": [
     {
       "name": "ajthinking/archetype",
@@ -651,31 +651,31 @@
     },
     {
       "name": "extism/extism",
-      "version": "v1.9.1",
+      "version": "v1.0.0",
       "source": {
         "type": "git",
         "url": "https://github.com/extism/php-sdk.git",
-        "reference": "43432a7d0e06b4764c9b5558a7b44628d4aace66"
+        "reference": "0a522ebeec0628f85b49acd079c96ee3d77692dc"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/extism/php-sdk/zipball/43432a7d0e06b4764c9b5558a7b44628d4aace66",
-        "reference": "43432a7d0e06b4764c9b5558a7b44628d4aace66",
+        "url": "https://api.github.com/repos/extism/php-sdk/zipball/0a522ebeec0628f85b49acd079c96ee3d77692dc",
+        "reference": "0a522ebeec0628f85b49acd079c96ee3d77692dc",
         "shasum": ""
       },
       "require": {
         "php": "^7.4 || ^8"
       },
       "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.59",
-        "phpunit/phpunit": "^9",
-        "squizlabs/php_codesniffer": "^3.10"
+        "phpunit/phpunit": "^10"
       },
       "type": "library",
       "autoload": {
-        "psr-0": {
-          "LibExtism": "src"
-        },
+        "files": [
+          "src/Manifest.php",
+          "src/Plugin.php",
+          "src/CurrentPlugin.php"
+        ],
         "psr-4": {
           "Extism\\": "src/"
         }
@@ -707,9 +707,9 @@
       ],
       "support": {
         "issues": "https://github.com/extism/php-sdk/issues",
-        "source": "https://github.com/extism/php-sdk/tree/v1.9.1"
+        "source": "https://github.com/extism/php-sdk/tree/v1.0.0"
       },
-      "time": "2024-12-16T14:55:48+00:00"
+      "time": "2024-01-29T14:12:42+00:00"
     },
     {
       "name": "facade/ignition-contracts",
