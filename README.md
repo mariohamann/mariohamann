@@ -25,13 +25,19 @@ I love to experiment and enjoy sharing my thoughts and results:
 
 When solving problems, sometimes they are generic and useful enough to be extracted into a package:
 
+### NPM
+
 -   [bentogrid.js](https://bentogrid.mariohamann.com/): Smart library for responsive bentogrids
 -   [tailwindcss-var](https://tailwindcss-var.mariohamann.com): Tailwind CSS plugin for CSS variables
 -   [activity-graph](https://mariohamann.github.io/activity-graph/): Web component to visualize data in style of GitHub's contribution graph
 -   [figma-export-assets](https://github.com/mariohamann/figma-export-assets): Highly customizable library for exporting assets from Figma API
 -   [vendorism](https://www.npmjs.com/package/vendorism): Utility to manage and override vendor files.
--   [innclude-iframe](https://github.com/mariohamann/include-iframe):  Web component to load and inject content from external HTML files
+-   [include-iframe](https://github.com/mariohamann/include-iframe):  Web component to load and inject content from external HTML files
 -   [more...](https://www.npmjs.com/~mariohamann)
+
+### Composer
+
+-   [Statamic Figma Assets](https://statamic.com/addons/mariohamann/figma-assets): Addon to import assets from Figma into your Statamic site.
 
 ## 🎬 Prototypes
 
