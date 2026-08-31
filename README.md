@@ -1,6 +1,6 @@
 # 👋 Hi!
 
-I'm Mario from Freiburg, Germany. I studied to be a teacher for Music, German and Math, but work as Principal Engineer and Design System Architect at [Virtual Identity AG](https://www.virtual-identity.com/).
+I'm Mario from Freiburg, Germany. I studied to be a teacher for Music, German and Math, but work as Principal Design Engineer at [Virtual Identity AG](https://www.virtual-identity.com/).
 
 ## 🎯 Focus
 
