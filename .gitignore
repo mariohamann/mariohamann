@@ -21,3 +21,4 @@ yarn-error.log
 ploi-*.sh
 
 **/.DS_Store
+/.phpunit.result.cache

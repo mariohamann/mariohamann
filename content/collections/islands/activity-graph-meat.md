@@ -30,4 +30,5 @@ placeholder:
 lazy_loading: false
 updated_by: 225d58b0-3de7-45fb-b9a6-a2f543c6834c
 updated_at: 1728764262
+seo_noindex: inherit
 ---

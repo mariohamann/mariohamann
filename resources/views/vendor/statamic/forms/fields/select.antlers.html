@@ -6,8 +6,7 @@
     :aria-invalid="errors.hasOwnProperty('{{ handle }}')"
     aria-describedBy="{{ handle }}"
     {{ multiple ?= "multiple" }}
-    {{ js_attributes }}
->
+    >
     {{ unless multiple }}
         <option value>{{ trans key="Please select..." }}</option>
     {{ /unless }}

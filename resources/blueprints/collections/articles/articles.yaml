@@ -71,7 +71,7 @@ tabs:
                             smartypants: false
                             table_of_contents: false
                             antlers: false
-                            type: markdown_highlight
+                            type: markdown
                             display: Markdown
                             icon: code-block
                             listable: hidden

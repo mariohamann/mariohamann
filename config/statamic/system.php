@@ -18,6 +18,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Enable Multi-site
+    |--------------------------------------------------------------------------
+    |
+    | Whether Statamic's multi-site functionality should be enabled. It is
+    | assumed Statamic Pro is also enabled. To get started, you can run
+    | the `php please multisite` command to update your content file
+    | structure, after which you can manage your sites in the CP.
+    |
+    | https://statamic.dev/multi-site
+    |
+    */
+
+    'multisite' => false,
+
+    /*
+    |--------------------------------------------------------------------------
     | Default Addons Paths
     |--------------------------------------------------------------------------
     |
@@ -57,6 +73,35 @@ return [
     */
 
     'date_format' => 'F jS, Y',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Timezone
+    |--------------------------------------------------------------------------
+    |
+    | Statamic will use this timezone when displaying dates on the front-end.
+    | You can use any timezone supported by PHP. When set to null it will
+    | fall back to the timezone defined in your `app.php` config file.
+    |
+    | https://www.php.net/manual/en/timezones.php
+    |
+    */
+
+    'display_timezone' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Localize Dates in Modifiers
+    |--------------------------------------------------------------------------
+    |
+    | When using date-related modifiers, Carbon instances will be in UTC.
+    | Enabling this setting will ensure that dates get localized into
+    | the timezone defined in `display_timezone`. Otherwise you'll
+    | need to manually localize dates in all of your templates.
+    |
+    */
+
+    'localize_dates_in_modifiers' => true,
 
     /*
     |--------------------------------------------------------------------------

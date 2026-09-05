@@ -31,6 +31,7 @@ head:
   code: null
   mode: handlebars
 lazy_loading: false
+seo_noindex: inherit
 content:
   code: |-
     <activity-graph

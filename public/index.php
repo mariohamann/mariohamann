@@ -5,6 +5,9 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
+// extism/extism 1.0.0 triggers a compile-time deprecation notice we can't patch in vendor code.
+error_reporting(E_ALL & ~E_DEPRECATED);
+
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance

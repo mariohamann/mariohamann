@@ -18,6 +18,7 @@ body:
   code: '<blockquote>This content took some time to load.<br/>Thank you so much for your patience.</blockquote>'
   mode: handlebars
 lazy_loading: true
+seo_noindex: inherit
 content:
   code: |-
     <head>

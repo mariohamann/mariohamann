@@ -8,7 +8,7 @@ page_builder:
     id: jpOJCCCB
     type: index_content
     enabled: true
-seo_noindex: false
+seo_noindex: inherit
 seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
