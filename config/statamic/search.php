@@ -2,7 +2,7 @@
 
 return [
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Default search index
     |--------------------------------------------------------------------------
@@ -12,9 +12,9 @@ return [
     |
     */
 
-    'default' => env('STATAMIC_DEFAULT_SEARCH_INDEX', 'default'),
+  'default' => env('STATAMIC_DEFAULT_SEARCH_INDEX', 'default'),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Search Indexes
     |--------------------------------------------------------------------------
@@ -23,22 +23,22 @@ return [
     |
     */
 
-    'indexes' => [
+  'indexes' => [
 
-        'default' => [
-            'driver' => 'local',
-            'searchables' => 'all',
-            'fields' => ['title', 'page_builder'],
-        ],
-
-        // 'blog' => [
-        //     'driver' => 'local',
-        //     'searchables' => 'collection:blog',
-        // ],
-
+    'default' => [
+      'driver' => 'local',
+      'searchables' => ['collection:*', 'taxonomy:*', 'assets:*', 'users'],
+      'fields' => ['title', 'page_builder'],
     ],
 
-    /*
+    // 'blog' => [
+    //     'driver' => 'local',
+    //     'searchables' => 'collection:blog',
+    // ],
+
+  ],
+
+  /*
     |--------------------------------------------------------------------------
     | Driver Defaults
     |--------------------------------------------------------------------------
@@ -50,22 +50,22 @@ return [
     |
     */
 
-    'drivers' => [
+  'drivers' => [
 
-        'local' => [
-            'path' => storage_path('statamic/search'),
-        ],
-
-        'algolia' => [
-            'credentials' => [
-                'id' => env('ALGOLIA_APP_ID', ''),
-                'secret' => env('ALGOLIA_SECRET', ''),
-            ],
-        ],
-
+    'local' => [
+      'path' => storage_path('statamic/search'),
     ],
 
-    /*
+    'algolia' => [
+      'credentials' => [
+        'id' => env('ALGOLIA_APP_ID', ''),
+        'secret' => env('ALGOLIA_SECRET', ''),
+      ],
+    ],
+
+  ],
+
+  /*
     |--------------------------------------------------------------------------
     | Search Defaults
     |--------------------------------------------------------------------------
@@ -75,8 +75,8 @@ return [
     |
     */
 
-    'defaults' => [
-        'fields' => ['title'],
-    ],
+  'defaults' => [
+    'fields' => ['title'],
+  ],
 
 ];
